@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gwqr7JcdA1Td7w2LvB98m7bazf6ng9m/2S+tyoa7ysgguoAkQeBNXpKJzmLHivdDg9N8uBS/VPolxDlSLOc6Kg==",
+  "success": true,
+  "projectFilePath": "E:\\hk5\\KaraokeNice_api\\Karaoke-api\\Karaoke-api\\Karaoke-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
