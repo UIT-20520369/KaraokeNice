@@ -10,7 +10,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="6.0.2" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Collection" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="HotChocolate" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Abstractions" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Data" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Data.AutoMapper" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Execution" Version="12.16.0" />
+    <PackageReference Include="HotChocolate.Types" Version="12.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.18.0" />
+    <PackageReference Include="MongoDB.Driver.GridFS" Version="2.18.0" />
+    <PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="12.16.0" />
+    <PackageReference Include="StrawberryShake.Core" Version="12.16.0" />
+    <PackageReference Include="StrawberryShake.Transport.Http" Version="12.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\EmployeeFeatures\EmployeeMutations\" />
+    <Folder Include="Features\RoleFeatures\RoleMutations\" />
+    <Folder Include="Features\UserFeatures\UserMutations\" />
   </ItemGroup>
 
 </Project>
