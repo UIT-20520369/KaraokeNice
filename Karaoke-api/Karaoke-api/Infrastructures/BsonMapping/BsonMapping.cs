@@ -7,6 +7,7 @@
            CreateUserBsonMapping();
             CreateRoleBsonMapping();
             CreateEmployeeBsonMapping();
+            CreateRoomTypeBsonMapping();
         }
     }
 }

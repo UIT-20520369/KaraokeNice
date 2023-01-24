@@ -6,7 +6,7 @@ using Karaoke_api.AggregateModels.RoleAggregates;
 using Karaoke_api.Features.RoleFeatures.RoleQueries;
 using Karaoke_api.Features.EmployeeFeatures;
 using Karaoke_api.Features.EmployeeFeatures.EmployeeQueries;
-
+using Karaoke_api.Features.RoomTypeFeatures.RoomTypeQueries;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure();
 builder.Services.AddMongoQueriesCollections(builder.Configuration);
@@ -16,6 +16,7 @@ builder.Services.AddGraphQLServer()
         .AddTypeExtension<UserQueries>()
         .AddTypeExtension<RoleQueries>()
         .AddTypeExtension<EmployeeQueries>()
+        .AddTypeExtension<RoomTypeQueries>()
         .AddMongoDbFiltering()
         .AddMongoDbPagingProviders()
         .AddMongoDbSorting()

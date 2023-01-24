@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Karaoke-api",
+    "\\Karaoke-api\\Karaoke-api",
+    "\\Karaoke-api\\Karaoke-api\\Infrastructures",
+    "\\Karaoke-api\\Karaoke-api\\Infrastructures\\BsonMapping"
   ],
+  "SelectedNode": "\\Karaoke-api\\Karaoke-api\\Infrastructures\\BsonMapping\\EmployeeBsonMapping.cs",
   "PreviewInSolutionExplorer": false
 }

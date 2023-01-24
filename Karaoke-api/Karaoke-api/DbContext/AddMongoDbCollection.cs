@@ -2,6 +2,7 @@
 using Karaoke_api.AggregateModels.UserAggregates;
 using Karaoke_api.AggregateModels.RoleAggregates;
 using Karaoke_api.AggregateModels.EmployeeAggregates;
+using Karaoke_api.AggregateModels.RoomTypeAggregates;
 namespace Karaoke_api.DbContext
 {
     public static partial class DependencyInjection
@@ -28,6 +29,7 @@ namespace Karaoke_api.DbContext
             services.AddMongoCollection<User>("User", configuration);
             services.AddMongoCollection<Role>("Role", configuration);
             services.AddMongoCollection<Employee>("Employee", configuration);
+            services.AddMongoCollection<RoomType>("RoomType", configuration);
             return services;
         }
     }
