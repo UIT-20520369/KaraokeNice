@@ -11,7 +11,7 @@ namespace Karaoke_api.AggregateModels.UserAggregates
         public UserAddress Address { get; private set; }
 
         public User() { }
-        public User( string id, string name, string phone, string gender, UserAddress address)
+        public User( string name, string phone, string gender, UserAddress address,string id =null)
         {
             Id = id;
             Name = name;

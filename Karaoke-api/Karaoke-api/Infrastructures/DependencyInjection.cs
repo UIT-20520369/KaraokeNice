@@ -2,6 +2,8 @@
 using Karaoke_api.AggregateModels.RoleAggregates;
 using Karaoke_api.AggregateModels.EmployeeAggregates;
 using Karaoke_api.AggregateModels.RoomTypeAggregates;
+using Karaoke_api.AggregateModels.ServiceAggregates;
+using Karaoke_api.AggregateModels.AccountAggregates;
 using Karaoke_api.Infrastructures.Repositories;
 using Karaoke_api.Infrastructures.BsonMapping;
 namespace Karaoke_api.Infrastructures
@@ -15,6 +17,8 @@ namespace Karaoke_api.Infrastructures
             services.AddSingleton<IRoleRepository, RoleRepository>();
             services.AddSingleton<IEmployeeRepository, EmployeeRepository>();
             services.AddSingleton<IRoomTypeRepository, RoomTypeRepository>();
+            services.AddSingleton<IServiceRepository, ServiceRepository>();
+            services.AddSingleton<IAccountRepository, AccountRepository>();
             return services;
         }
     }

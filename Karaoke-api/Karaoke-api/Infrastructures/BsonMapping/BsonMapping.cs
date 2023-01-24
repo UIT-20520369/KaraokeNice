@@ -8,6 +8,8 @@
             CreateRoleBsonMapping();
             CreateEmployeeBsonMapping();
             CreateRoomTypeBsonMapping();
+            CreateServiceBsonMapping();
+            CreateAccountBsonMapping();
         }
     }
 }

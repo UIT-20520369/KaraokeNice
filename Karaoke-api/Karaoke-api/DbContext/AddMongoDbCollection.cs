@@ -3,6 +3,8 @@ using Karaoke_api.AggregateModels.UserAggregates;
 using Karaoke_api.AggregateModels.RoleAggregates;
 using Karaoke_api.AggregateModels.EmployeeAggregates;
 using Karaoke_api.AggregateModels.RoomTypeAggregates;
+using Karaoke_api.AggregateModels.ServiceAggregates;
+using Karaoke_api.AggregateModels.AccountAggregates;
 namespace Karaoke_api.DbContext
 {
     public static partial class DependencyInjection
@@ -30,6 +32,8 @@ namespace Karaoke_api.DbContext
             services.AddMongoCollection<Role>("Role", configuration);
             services.AddMongoCollection<Employee>("Employee", configuration);
             services.AddMongoCollection<RoomType>("RoomType", configuration);
+            services.AddMongoCollection<Service>("Service", configuration);
+            services.AddMongoCollection<Account>("Account", configuration);
             return services;
         }
     }

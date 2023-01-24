@@ -7,16 +7,23 @@ using Karaoke_api.Features.RoleFeatures.RoleQueries;
 using Karaoke_api.Features.EmployeeFeatures;
 using Karaoke_api.Features.EmployeeFeatures.EmployeeQueries;
 using Karaoke_api.Features.RoomTypeFeatures.RoomTypeQueries;
+using Karaoke_api.Features.ServiceFeatures.ServiceQueries;
+using Karaoke_api.Features.AccountFeatures.AccountQueries;
+using Karaoke_api.Features.UserFeatures.UserMutations;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure();
 builder.Services.AddMongoQueriesCollections(builder.Configuration);
 builder.Services.AddGraphQLServer()
     .AddMutationConventions(applyToAllMutations: true)
         .AddQueryType(c => c.Name("Query"))
-        .AddTypeExtension<UserQueries>()
-        .AddTypeExtension<RoleQueries>()
-        .AddTypeExtension<EmployeeQueries>()
-        .AddTypeExtension<RoomTypeQueries>()
+            .AddTypeExtension<UserQueries>()
+            .AddTypeExtension<RoleQueries>()
+            .AddTypeExtension<EmployeeQueries>()
+            .AddTypeExtension<RoomTypeQueries>()
+            .AddTypeExtension<ServiceQueries>()
+            .AddTypeExtension<AccountQueries>()
+        .AddMutationType(c => c.Name("Mutation"))
+            .AddTypeExtension<UserMutations>()
         .AddMongoDbFiltering()
         .AddMongoDbPagingProviders()
         .AddMongoDbSorting()

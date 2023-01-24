@@ -42,10 +42,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\AccountFeatures\AccountMutations\" />
     <Folder Include="Features\EmployeeFeatures\EmployeeMutations\" />
     <Folder Include="Features\RoleFeatures\RoleMutations\" />
     <Folder Include="Features\RoomTypeFeatures\RoomTypeMutations\" />
-    <Folder Include="Features\UserFeatures\UserMutations\" />
+    <Folder Include="Features\ServiceFeatures\ServiceMutations\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using Karaoke_api.AggregateModels.UserAggregates;
+﻿using Karaoke_api.AggregateModels.AccountAggregates;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.IdGenerators;
@@ -7,17 +7,15 @@ namespace Karaoke_api.Infrastructures.BsonMapping
 {
     public static partial class BsonMapping
     {
-        public static void CreateUserBsonMapping()
+        public static void CreateAccountBsonMapping()
         {
-            BsonClassMap.RegisterClassMap<User>(cm =>
+            BsonClassMap.RegisterClassMap<Account>(cm =>
             {
-                cm.MapCreator(c => new User(c.Name,c.Phone,c.Gender,c.Address,c.Id));
+                cm.MapCreator(c => new Account(c.Id, c.Username, c.Password));
 
                 cm.MapIdProperty("Id").SetIdGenerator(new StringObjectIdGenerator()).SetSerializer(new StringSerializer(BsonType.ObjectId));
-                cm.MapProperty(c => c.Name);
-                cm.MapProperty(c => c.Phone);
-                cm.MapProperty(c => c.Gender);
-                cm.MapProperty(c => c.Address);
+                cm.MapProperty(c => c.Username);
+                cm.MapProperty(c => c.Password);
             });
         }
     }

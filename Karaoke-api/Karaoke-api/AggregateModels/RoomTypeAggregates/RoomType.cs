@@ -13,7 +13,8 @@ namespace Karaoke_api.AggregateModels.RoomTypeAggregates
         public double Price { get; set; }
         public string[] Services { get; set; }
         public string Thumnail { get; set; }
-        public RoomType(string id, string name, string description, string[] gallery, int guests, double price, string[] services, string thumnail)
+        public string ShortContent { get; set; }
+        public RoomType(string id, string name, string description, string[] gallery, int guests, double price, string[] services, string thumnail, string shortContent)
         {
             Id = id;
             Name = name;
@@ -23,6 +24,7 @@ namespace Karaoke_api.AggregateModels.RoomTypeAggregates
             Price = price;
             Services = services;
             Thumnail = thumnail;
+            ShortContent = shortContent;
         }
         public RoomType() { }
         public void Update(RoomType roomType)
