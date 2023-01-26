@@ -11,7 +11,7 @@ namespace Karaoke_api.Infrastructures.BsonMapping
         {
             BsonClassMap.RegisterClassMap<Role>(cm =>
             {
-                cm.MapCreator(c => new Role(c.Id, c.Name, c.Code));
+                cm.MapCreator(c => new Role( c.Name, c.Code, c.Id));
 
                 cm.MapIdProperty("Id").SetIdGenerator(new StringObjectIdGenerator()).SetSerializer(new StringSerializer(BsonType.ObjectId));
                 cm.MapProperty(c => c.Name);

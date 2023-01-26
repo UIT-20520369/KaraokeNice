@@ -10,6 +10,9 @@
             CreateRoomTypeBsonMapping();
             CreateServiceBsonMapping();
             CreateAccountBsonMapping();
+            CreateShiftBsonMapping();
+            CreateShiftDetailBsonMapping();
+            
         }
     }
 }

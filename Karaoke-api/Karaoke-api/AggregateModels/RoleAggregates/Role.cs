@@ -8,7 +8,7 @@ namespace Karaoke_api.AggregateModels.RoleAggregates
         public string Name { get; set; }
         public string Code { get; set; }
         public Role () { }
-        public Role (string id, string name, string code)
+        public Role ( string name, string code, string id=null)
         {
             Id = id; Name = name;
             Code = code;

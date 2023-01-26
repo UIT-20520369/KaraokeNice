@@ -11,7 +11,7 @@ namespace Karaoke_api.Infrastructures.BsonMapping
         {
             BsonClassMap.RegisterClassMap<RoomType>(cm =>
             {
-                cm.MapCreator(c => new RoomType(c.Id, c.Name,c.Description,c.Gallery,c.Guests,c.Price,c.Services,c.Thumnail,c.ShortContent));
+                cm.MapCreator(c => new RoomType( c.Name,c.Description,c.Gallery,c.Guests,c.Price,c.Services,c.Thumnail,c.ShortContent,c.Areas,c.Id));
 
                 cm.MapIdProperty("Id").SetIdGenerator(new StringObjectIdGenerator()).SetSerializer(new StringSerializer(BsonType.ObjectId));
                 cm.MapProperty(c => c.Name);
@@ -22,6 +22,7 @@ namespace Karaoke_api.Infrastructures.BsonMapping
                 cm.MapProperty(c => c.Services);
                 cm.MapProperty(c => c.Thumnail);
                 cm.MapProperty(c => c.ShortContent);
+                cm.MapProperty(c => c.Areas);
             });
         }
     }

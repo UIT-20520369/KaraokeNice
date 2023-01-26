@@ -11,7 +11,7 @@ namespace Karaoke_api.AggregateModels.ServiceAggregates
 
         public string Type { get; set; }
         public string Thumbnail { get; set; }
-        public Service(string id, string name, string type, string thumbnail)
+        public Service( string name, string type, string thumbnail, string id=null)
         {
             Id = id;
             Name = name;

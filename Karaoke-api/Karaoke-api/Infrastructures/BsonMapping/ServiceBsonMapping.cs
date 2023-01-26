@@ -12,7 +12,7 @@ namespace Karaoke_api.Infrastructures.BsonMapping
         {
             BsonClassMap.RegisterClassMap<Service>(cm =>
             {
-                cm.MapCreator(c => new Service(c.Id,c.Name,c.Type,c.Thumbnail));
+                cm.MapCreator(c => new Service(c.Name,c.Type,c.Thumbnail, c.Id));
 
                 cm.MapIdProperty("Id").SetIdGenerator(new StringObjectIdGenerator()).SetSerializer(new StringSerializer(BsonType.ObjectId));
                 cm.MapProperty(c => c.Name);

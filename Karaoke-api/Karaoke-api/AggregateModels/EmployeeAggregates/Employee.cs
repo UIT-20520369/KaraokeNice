@@ -11,9 +11,9 @@ namespace Karaoke_api.AggregateModels.EmployeeAggregates
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string RoleId { get; set; }
-        public int CountShift { get; set; }
+        public int? CountShift { get; set; }
         public Employee() { }
-        public Employee(string id, string name, string address, string gender, string phone, string roleId, int countShift)
+        public Employee( string name, string address, string gender, string phone, string roleId, int? countShift, string id=null)
         {
             Id = id;
             Name = name;

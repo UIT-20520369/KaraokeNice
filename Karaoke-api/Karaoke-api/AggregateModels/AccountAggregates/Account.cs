@@ -8,7 +8,7 @@ namespace Karaoke_api.AggregateModels.AccountAggregates
         public string Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public Account (string id, string username, string password)
+        public Account ( string username, string password, string id=null)
         {
             Id = id;
             Username = username;
