@@ -12,6 +12,7 @@
             CreateAccountBsonMapping();
             CreateShiftBsonMapping();
             CreateShiftDetailBsonMapping();
+            CreateRoomBsonMapping();
             
         }
     }

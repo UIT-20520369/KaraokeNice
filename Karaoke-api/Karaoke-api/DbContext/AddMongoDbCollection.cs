@@ -7,6 +7,7 @@ using Karaoke_api.AggregateModels.ServiceAggregates;
 using Karaoke_api.AggregateModels.AccountAggregates;
 using Karaoke_api.AggregateModels.ShiftAggregates;
 using Karaoke_api.AggregateModels.ShiftDetailAggregates;
+using Karaoke_api.AggregateModels.RoomAggregates;
 namespace Karaoke_api.DbContext
 {
     public static partial class DependencyInjection
@@ -38,6 +39,7 @@ namespace Karaoke_api.DbContext
             services.AddMongoCollection<Account>("Account", configuration);
             services.AddMongoCollection<Shift>("Shift", configuration);
             services.AddMongoCollection<ShiftDetail>("ShiftDetail", configuration);
+            services.AddMongoCollection<Room>("Room", configuration);
             return services;
         }
     }

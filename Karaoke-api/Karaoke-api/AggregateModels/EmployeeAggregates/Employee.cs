@@ -1,4 +1,5 @@
 ﻿using Karaoke_api.AggregateModels.Seedwork;
+using Karaoke_api.AggregateModels.RoleAggregates;
 using System.Reflection;
 
 namespace Karaoke_api.AggregateModels.EmployeeAggregates
@@ -11,6 +12,7 @@ namespace Karaoke_api.AggregateModels.EmployeeAggregates
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string RoleId { get; set; }
+        public Role? Role { get; set; }
         public int? CountShift { get; set; }
         public Employee() { }
         public Employee( string name, string address, string gender, string phone, string roleId, int? countShift, string id=null)

@@ -1,7 +1,7 @@
 ﻿using Karaoke_api.AggregateModels.Seedwork;
 using Karaoke_api.AggregateModels.ShiftAggregates;
 using Karaoke_api.AggregateModels.ShiftDetailAggregates;
-using Karaoke_api.AggregateModels.UserAggregates;
+using Karaoke_api.AggregateModels.EmployeeAggregates;
 using System.Reflection;
 
 namespace Karaoke_api.AggregateModels.ShiftDetailAggregates
@@ -12,7 +12,7 @@ namespace Karaoke_api.AggregateModels.ShiftDetailAggregates
         public string ShiftId { get; set; }
         public string EmployeeId { get; set; }
         public DateTime? WorkDay { get; set; }
-        public User? Employee { get; set; }
+        public Employee? Employee { get; set; }
         public Shift? Shifting { get; set; }
         public ShiftDetail() {
         }

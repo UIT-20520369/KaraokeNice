@@ -8,6 +8,8 @@ using Karaoke_api.AggregateModels.ShiftAggregates;
 using Karaoke_api.AggregateModels.ShiftDetailAggregates;
 using Karaoke_api.Infrastructures.Repositories;
 using Karaoke_api.Infrastructures.BsonMapping;
+using Karaoke_api.AggregateModels.RoomAggregates;
+
 namespace Karaoke_api.Infrastructures
 {
     public static partial class DependencyInjection
@@ -23,6 +25,7 @@ namespace Karaoke_api.Infrastructures
             services.AddSingleton<IAccountRepository, AccountRepository>();
             services.AddSingleton<IShiftRepository,ShiftRepository>();
             services.AddSingleton<IShiftDetailRepository, ShiftDetailRepository>();
+            services.AddSingleton<IRoomRepository,RoomRepository>();
             return services;
         }
     }

@@ -1,6 +1,6 @@
 ﻿using Karaoke_api.AggregateModels.ShiftAggregates;
 using Karaoke_api.AggregateModels.ShiftDetailAggregates;
-using Karaoke_api.AggregateModels.UserAggregates;
+using Karaoke_api.AggregateModels.EmployeeAggregates;
 using MongoDB.Driver;
 namespace Karaoke_api.Features.ShiftDetailFeatures.ShiftDetailQueries
 {
@@ -17,9 +17,9 @@ namespace Karaoke_api.Features.ShiftDetailFeatures.ShiftDetailQueries
             }
         [UseFiltering]
         [UseSorting]
-        public IExecutable<ShiftDetail> GetShiftDetails([Service] IMongoCollection<ShiftDetail> collection, [Service] IMongoCollection<User> userCollection, [Service] IMongoCollection<Shift> shiftCollection)
+        public IExecutable<ShiftDetail> GetShiftDetails([Service] IMongoCollection<ShiftDetail> collection, [Service] IMongoCollection<Employee> employeeCollection, [Service] IMongoCollection<Shift> shiftCollection)
         {
-            return collection.Aggregate().Lookup<ShiftDetail, User, ShiftDetail>(userCollection
+            return collection.Aggregate().Lookup<ShiftDetail, Employee, ShiftDetail>(employeeCollection
                 , c => c.EmployeeId
                 , d => d.Id
                 , e => e.Employee).Unwind<ShiftDetail, ShiftDetail>(u => u.Employee)
@@ -32,9 +32,9 @@ namespace Karaoke_api.Features.ShiftDetailFeatures.ShiftDetailQueries
         [UseOffsetPaging(IncludeTotalCount = true)]
         [UseFiltering]
         [UseSorting]
-        public IExecutable<ShiftDetail> GetShiftDetailsWithPagination([Service] IMongoCollection<ShiftDetail> collection, [Service] IMongoCollection<User> userCollection, [Service] IMongoCollection<Shift> shiftCollection)
+        public IExecutable<ShiftDetail> GetShiftDetailsWithPagination([Service] IMongoCollection<ShiftDetail> collection, [Service] IMongoCollection<Employee> employeeCollection, [Service] IMongoCollection<Shift> shiftCollection)
         {
-            return collection.Aggregate().Lookup<ShiftDetail, User, ShiftDetail>(userCollection
+            return collection.Aggregate().Lookup<ShiftDetail, Employee, ShiftDetail>(employeeCollection
                   , c => c.EmployeeId
                   , d => d.Id
                   , e => e.Employee).Unwind<ShiftDetail, ShiftDetail>(u => u.Employee)
