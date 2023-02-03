@@ -3,6 +3,7 @@
     "",
     "\\Karaoke-api",
     "\\Karaoke-api\\Karaoke-api",
+    "\\Karaoke-api\\Karaoke-api\\AggregateModels",
     "\\Karaoke-api\\Karaoke-api\\Features",
     "\\Karaoke-api\\Karaoke-api\\Features\\RoomTypeFeatures",
     "\\Karaoke-api\\Karaoke-api\\Features\\RoomTypeFeatures\\RoomTypeQueries",
@@ -11,6 +12,6 @@
     "\\Karaoke-api\\Karaoke-api\\Infrastructures",
     "\\Karaoke-api\\Karaoke-api\\Infrastructures\\BsonMapping"
   ],
-  "SelectedNode": "\\Karaoke-api\\Karaoke-api\\Infrastructures\\BsonMapping\\ShiftDetailBsonMapping.cs",
+  "SelectedNode": "\\Karaoke-api\\Karaoke-api\\Features\\RoomTypeFeatures\\RoomTypeQueries\\RoomTypeQueries.cs",
   "PreviewInSolutionExplorer": false
 }

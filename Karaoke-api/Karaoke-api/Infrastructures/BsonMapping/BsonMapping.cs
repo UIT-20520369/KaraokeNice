@@ -13,7 +13,8 @@
             CreateShiftBsonMapping();
             CreateShiftDetailBsonMapping();
             CreateRoomBsonMapping();
-            
+            CreateExtraServiceBsonMapping();
+            CreateBookingBsonMapping();
         }
     }
 }

@@ -7,6 +7,8 @@ using Karaoke_api.AggregateModels.AccountAggregates;
 using Karaoke_api.AggregateModels.ShiftAggregates;
 using Karaoke_api.AggregateModels.ShiftDetailAggregates;
 using Karaoke_api.Infrastructures.Repositories;
+using Karaoke_api.AggregateModels.ExtraServiceAggregates;
+using Karaoke_api.AggregateModels.BookingAggregates;
 using Karaoke_api.Infrastructures.BsonMapping;
 using Karaoke_api.AggregateModels.RoomAggregates;
 
@@ -26,6 +28,8 @@ namespace Karaoke_api.Infrastructures
             services.AddSingleton<IShiftRepository,ShiftRepository>();
             services.AddSingleton<IShiftDetailRepository, ShiftDetailRepository>();
             services.AddSingleton<IRoomRepository,RoomRepository>();
+            services.AddSingleton<IExtraServiceRepository, ExtraServiceRepository>();
+            services.AddSingleton<IBookingRepository, BookingRepository>();
             return services;
         }
     }

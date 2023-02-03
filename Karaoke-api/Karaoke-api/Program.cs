@@ -12,6 +12,8 @@ using Karaoke_api.Features.AccountFeatures.AccountQueries;
 using Karaoke_api.Features.ShiftFeatures.ShiftQueries;
 using Karaoke_api.Features.ShiftDetailFeatures.ShiftDetailQueries;
 using Karaoke_api.Features.RoomFeatures.RoomQueries;
+using Karaoke_api.Features.ExtraServiceFeatures.ExtraServiceQueries;
+using Karaoke_api.Features.BookingFeatures.BookingQueries;
 using Karaoke_api.Features.UserFeatures.UserMutations;
 using Karaoke_api.Features.ServiceFeatures.ServiceMutations;
 using Karaoke_api.Features.AccountFeatures.AccountMutations;
@@ -21,6 +23,8 @@ using Karaoke_api.Features.RoomTypeFeatures.RoomTypeMutations;
 using Karaoke_api.Features.ShiftDetailFeatures.ShiftDetailMutations;
 using Karaoke_api.Features.ShiftFeatures.ShiftMutations;
 using Karaoke_api.Features.RoomFeatures.RoomMutations;
+using Karaoke_api.Features.ExtraServiceFeatures.ExtraServiceMutations;
+using Karaoke_api.Features.BookingFeatures.BookingMutaions;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure();
 builder.Services.AddMongoQueriesCollections(builder.Configuration);
@@ -36,6 +40,8 @@ builder.Services.AddGraphQLServer()
             .AddTypeExtension<ShiftQueries>()
             .AddTypeExtension<ShiftDetailQueries>()
             .AddTypeExtension<RoomQueries>()
+            .AddTypeExtension<ExtraServiceQueries>()
+            .AddTypeExtension<BookingQueries>()
         .AddMutationType(c => c.Name("Mutation"))
             .AddTypeExtension<UserMutations>()
             .AddTypeExtension<ServiceMutations>()
@@ -46,6 +52,8 @@ builder.Services.AddGraphQLServer()
             .AddTypeExtension<ShiftMutations>()
             .AddTypeExtension<ShiftDetailMutations>()
             .AddTypeExtension<RoomMutations>()
+            .AddTypeExtension<ExtraServiceMutations>()
+            .AddTypeExtension<BookingMutations>()
         .AddMongoDbFiltering()
         .AddMongoDbPagingProviders()
         .AddMongoDbSorting()

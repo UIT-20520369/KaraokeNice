@@ -17,7 +17,7 @@ namespace Karaoke_api.Features.RoomTypeFeatures.RoomTypeQueries
         [UseSorting]
         public IExecutable<RoomType> GetRoomTypesWithPagination([Service] IMongoCollection<RoomType> collection)
         {
-            return collection.AsExecutable();
+            return collection.Aggregate().AsExecutable();
         }
     }
 }
